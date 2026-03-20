@@ -9,9 +9,40 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 200px;
-    background: linear-gradient(to bottom, gray, rgba(130, 129, 129, 0.612));
+    background: linear-gradient(to bottom, rgba(211, 6, 204, 0.046), rgba(255, 255, 255, 0.612), rgba(184, 6, 211, 0.073));
+    background: linear-gradient(to right, rgba(211, 6, 204, 0.046), rgba(255, 255, 255, 0.612), rgba(184, 6, 211, 0.073));
+
     background-repeat: no-repeat;
-    height: 495px;
+    height: 900px;
+}
+
+.rotas{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.rotas-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.rotas-sep{
+    font-size: 26px;
+}
+
+.rotas:hover{
+    transform: scale(1.2);
+}
+.caixa{
+    border: 4px solid rgba(116, 114, 114, 0);
+    box-shadow:  0 8px 10px -5px rgba(0, 0, 0, 0.785);
+    padding: 50px;
+    border-radius: 16px;
 }
 
 .cadastro-aluno{
@@ -20,3 +51,60 @@ body{
     margin-bottom: 20px;
 }
 
+.cadastro-aluno h2{
+    margin-bottom: px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    border: 4px solid rgba(116, 114, 114, 0);
+    box-shadow:  0 8px 10px -5px rgba(0, 0, 0, 0.785);
+    border-radius: 16px;
+    margin: 20px;
+    background-color: rgba(6, 177, 211, 0.39);
+    padding: 5px;
+    text-align: center;
+}
+
+button{
+    border: none;
+    border-radius: 16px;
+    padding: 5px;
+    margin: 2px;
+    color: white;
+    background-color: black;
+    transition: transform 0.3 ease;
+}
+button:hover {
+    background: linear-gradient(0deg,#A47CF3,#683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917FF;
+    transform: translateY(-2px);
+}
+
+input{
+    padding: 10px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    border: 2px solid rgba(0, 0, 0, 0.046);
+
+}
+
+
+.relatorio{
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 16px;
+    box-shadow:  0 8px 10px -5px rgba(0, 0, 0, 0.785);
+    padding: 50px;
+}
+
+.relatorio h2{
+    text-align: center;
+
+}

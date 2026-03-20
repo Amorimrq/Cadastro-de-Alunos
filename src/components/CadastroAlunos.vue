@@ -1,25 +1,27 @@
 <template>
-  <div class="cadastro-aluno">
-    <h2>Cadastro de Alunos</h2>
+  <div class="caixa">
+    <div class="cadastro-aluno">
+      <h2>Cadastro de Alunos</h2>
 
-    <form class="form"  @submit.prevent="salvar">
-      <input v-model="aluno.nome" placeholder="Nome" required />
-      <input type="number" v-model.number="aluno.idade" placeholder="Idade" required min="5" />
-      <button type="submit">{{ aluno.index === null ? 'Adicionar' : 'Salvar' }}</button>
-      <button v-if="aluno.index !== null" type="button" @click="cancelar">Cancelar</button>
-    </form>
+      <form class="form"  @submit.prevent="salvar">
+        <input v-model="aluno.nome" placeholder="Nome" required class="nome"/>
+        <input type="number" v-model.number="aluno.idade" placeholder="Idade" required min="5" />
+        <button type="submit">{{ aluno.index === null ? 'Adicionar' : 'Salvar' }}</button>
+        <button v-if="aluno.index !== null" type="button" @click="cancelar">Cancelar</button>
+      </form>
 
-    <input v-model="busca" placeholder="Buscar aluno..." />
+      <input v-model="busca" placeholder="Buscar aluno..." />
 
-    <ul>
-      <li v-for="(a, i) in alunosFiltrados" :key="i">
-        {{ a.nome }} - {{ a.idade }} anos
-        <button @click="editar(i)">Editar</button>
-        <button @click="remover(i)">Remover</button>
-      </li>
-    </ul>
-    <p v-if="!alunosFiltrados.length">Nenhum aluno encontrado.</p>
-  </div>
+      <ul>
+        <li v-for="(a, i) in alunosFiltrados" :key="i">
+          {{ a.nome }} - {{ a.idade }} anos
+          <button @click="editar(i)">Editar</button>
+          <button @click="remover(i)">Remover</button>
+        </li>
+      </ul>
+      <p v-if="!alunosFiltrados.length">Nenhum aluno encontrado.</p>
+    </div>
+    </div>
 </template>
 
 <script setup>
